@@ -1,0 +1,10 @@
+version: 2
+
+sources: 
+  - name: staging
+    #For bigquery:
+    database: us-domestic-flights-356906
+    schema: us_domestic_flights
+
+    table:
+      - name: flights
