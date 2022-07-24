@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+    - name: staging
+      database: us-domestic-flights-356906
+      schema: us_domestic_flights
+
+      tables: 
+        - name: flights
