@@ -1,0 +1,56 @@
+
+
+============================== 2022-08-16 15:40:49.446147 | 6a971160-5b43-4184-ae36-f04b8466ccb5 ==============================
+[0m15:40:49.446147 [info ] [MainThread]: Running with dbt=1.2.0
+[0m15:40:49.447145 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\DELL\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m15:40:49.447145 [debug] [MainThread]: Tracking: tracking
+[0m15:40:49.461146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B404DC9040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B404DBB0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B404DBBF70>]}
+[0m15:41:27.026648 [debug] [MainThread]: Starter project path: C:\Users\DELL\anaconda3\lib\site-packages\dbt\include\starter_project
+[0m15:43:24.747635 [info ] [MainThread]: Profile m_project written to C:\Users\DELL\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:43:24.751336 [info ] [MainThread]: 
+Your new dbt project "m_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:43:24.755321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B404DCD4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B404DCD610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B404DCD850>]}
+
+
+============================== 2022-08-16 15:45:52.276278 | 7201603e-79fe-4e7f-aece-a31c74f37ec7 ==============================
+[0m15:45:52.276278 [info ] [MainThread]: Running with dbt=1.2.0
+[0m15:45:52.277605 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\DELL\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m15:45:52.278278 [debug] [MainThread]: Tracking: tracking
+[0m15:45:52.291279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E7948070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E793B070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E793BFD0>]}
+[0m15:45:53.677646 [debug] [MainThread]: Executing "git --help"
+[0m15:45:53.700965 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:45:53.701963 [debug] [MainThread]: STDERR: "b''"
+[0m15:45:53.707419 [debug] [MainThread]: Acquiring new bigquery connection "debug"
+[0m15:45:53.708417 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:45:53.708417 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: '/c/Users/DELL/.google/credentials/google_credentials.json''
+[0m15:45:53.712429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209EA6BB250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209EA6BB2E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209EA6BB400>]}
+[0m15:45:55.039642 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-08-16 15:54:41.945533 | 95bf7d54-fef6-4b07-bec6-1a5ea729acd1 ==============================
+[0m15:54:41.945533 [info ] [MainThread]: Running with dbt=1.2.0
+[0m15:54:41.947277 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\DELL\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m15:54:41.948177 [debug] [MainThread]: Tracking: tracking
+[0m15:54:41.971175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB39AA80D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB39A9AC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB39A9AEE0>]}
+[0m15:54:43.301097 [debug] [MainThread]: Executing "git --help"
+[0m15:54:43.322021 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:54:43.323020 [debug] [MainThread]: STDERR: "b''"
+[0m15:54:43.327501 [debug] [MainThread]: Acquiring new bigquery connection "debug"
+[0m15:54:43.328055 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:54:43.328055 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: '~/.google/credentials/google_credentials.json''
+[0m15:54:43.331020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB3C80C490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB3C80C340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB3C80CC10>]}
+[0m15:54:44.838239 [debug] [MainThread]: Connection 'debug' was properly closed.
