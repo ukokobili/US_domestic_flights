@@ -35,3 +35,5 @@ sudo chmod -R 777 /home/nerd/projects/US_domestic_flights/dbt/dbt/project_1
 docker-compose up --remove-orphans -d --build
 
 C:/Users/DELL/...
+
+https://www.w3.org/2003/01/geo/test/ustowns/latlong.htm
