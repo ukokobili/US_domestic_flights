@@ -2,28 +2,32 @@
 
 select
 
-    -- identifiers
-    --{{ dbt_utils.surrogate_key(['Origin']) }} as origin_id,
-
-    -- flight location
-    cast(Origin as string) as origin_code,			
-    cast(Destination as string) as destination_code,			
-    cast(Origin_City as string) as origin_city,			
-    cast(Origin_State as string) as origin_state,				
-    cast(Destination_City as string) as destination_city,				
-    cast(Destination_State as string) as destination_state,
+  -- flight location
+    Origin as origin_code,			
+    Destination as destination_code,			
+    Origin_City as origin_city,			
+    Origin_State as origin_state,				
+    Destination_City as destination_city,				
+    Destination_State as destination_state,
 
     -- date
-    cast(Date as date) flight_date,
+    Date as flight_date,
 
     -- flight info				
-    cast(Passengers as integer) as passengers,			
-    cast(Seats	as integer) as seats,				
-    cast(Flights as integer) as flights,				
-    cast(Distance as float) as distance,	
+    Passengers as passengers,			
+    Seats as seats,				
+    Flights as no_of_flights,				
+    Distance as distance,	
 
     -- state info			
-    cast(Origin_Population	as integer) as origin_population,				
-    cast(Destination_Population	as integer) as destination_population		
+    Origin_Population as origin_population,				
+    Destination_Population as destination_population		
 
 from {{ source('staging','flights') }}
+
+-- dbt build --m <model.sql> --var 'is_test_run: false'
+{% if var('is_test_run', default=true) %}
+
+  limit 100
+
+{% endif %}
