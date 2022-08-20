@@ -54,7 +54,7 @@ with DAG(
 
     # formate int date to date datatype and create new table
     CREATE_NEW_TABLE_DATE = " CREATE OR REPLACE TABLE us-domestic-flights-356906.us_domestic_flights.flights AS \
-        SELECT Origin, Destination, Origin_City, Origin_State, Destination_City, Destination_State, Passengers, Seats, Flights, Distance, DATE(CONCAT(FLOOR(Fly_Date/100),'-',MOD(Fly_Date, 100),'-',1)) AS Date, Origin_Population, Destination_Population \
+        SELECT Origin, Destination, Origin_City, Origin_State, Destination_City, Destination_State, Passengers, Seats, Flights as no_of_flights, Distance, DATE(CONCAT(FLOOR(Fly_Date/100),'-',MOD(Fly_Date, 100),'-',1)) AS Date, Origin_Population, Destination_Population \
         FROM `us-domestic-flights-356906.us_domestic_flights.us-domestic-flights-from-1990-to-2009` "
 
     new_date_table = BigQueryInsertJobOperator(

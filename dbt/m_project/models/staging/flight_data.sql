@@ -3,25 +3,25 @@
 select
 
   -- flight location
-    Origin as origin_code,			
-    Destination as destination_code,			
-    Origin_City as origin_city,			
-    Origin_State as origin_state,				
-    Destination_City as destination_city,				
-    Destination_State as destination_state,
+    cast(Origin as string) as origin_code,			
+    cast(Destination as string) as destination_code,			
+    cast(Origin_City as string) as origin_city,			
+    cast(Origin_State as string) as origin_state,				
+    cast(Destination_City as string) as destination_city,				
+    cast(Destination_State as string) as destination_state,
 
     -- date
-    Date as flight_date,
+    cast(Date as date) as flight_date,
 
     -- flight info				
-    Passengers as passengers,			
-    Seats as seats,				
-    Flights as no_of_flights,				
-    Distance as distance,	
+    cast(Passengers as integer) as passengers,			
+    cast(Seats as integer) as seats,				
+    cast(no_of_flights as integer) as no_of_flights,				
+    cast(Distance as numeric) as distance,	
 
     -- state info			
-    Origin_Population as origin_population,				
-    Destination_Population as destination_population		
+    cast(Origin_Population as integer) as origin_population,				
+    cast(Destination_Population as integer) as destination_population		
 
 from {{ source('staging','flights') }}
 

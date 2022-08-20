@@ -38,7 +38,7 @@ models:
       +materialized: view
 
 seeds:
-  my_project:
+  m_project:
     us_cities_codes:
       +columns_types:
-        city_code: string
+        state_code: string

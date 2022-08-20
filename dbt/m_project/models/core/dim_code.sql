@@ -1,7 +1,9 @@
 {{ config(materialized='table') }}
 
 select
-    city_code,			
-    lat,			
-    lon
+    state_code,
+    airport_type,
+    airport_name,
+    lat_lon,
+    city
 from {{ ref('us_cities_codes') }}
