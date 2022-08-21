@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_code
+    description: >
+      List of unique cities identified by US code. 
+      Includes the longitude and latitude of all airports.
+  - name: fact_flights
+    description: >
+      The table contains records where both origin and destinantion airport are valid and known cities. 
+      Each record corresponds to a flight uniquely identified by city code. 
+      
+  - name: yearly_flight
+    description: >
+      Aggregated table of all US flights corresponding and contains yearly number of flights. 
+      The table contains also yearly indicators like total number of flights, and average flight distance. 
+    columns:
+      - name: total_yearly_flight_per_airport
+        description: Yearly total number of flight per airport for the time period.
+        tests:
+            - not_null:
+                severity: error
+
+                

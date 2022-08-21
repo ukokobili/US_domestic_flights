@@ -1,6 +1,8 @@
 {{ config(materialized='table') }}
 
-with a as (
+with 
+
+a as (
     select *
     from {{ ref('flight_data') }}
 ), 
