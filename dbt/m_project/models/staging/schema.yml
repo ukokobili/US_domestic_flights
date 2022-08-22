@@ -5,7 +5,6 @@ sources:
       database: us-domestic-flights-356906
       schema: us_domestic_flights
 
-      # loaded_at_field: record_loaded_at
       tables:
         - name: flights
 
@@ -27,20 +26,10 @@ models:
             description: Three letter airport code of the destination airport.
           - name: origin_city 
             description: Origin city name.
-            tests:
-              - relationships:
-                  to: ref('us_cities_codes')
-                  field: city
-                  severity: warn
           - name: origin_state 
             description: Origin state name.
           - name: destination_city
             description: Destination city name.
-            tests:
-              - relationships:
-                  to: ref('us_cities_codes')
-                  field: city
-                  severity: warn
           - name: destination_state 
             description: > 
               Destination state name.
@@ -53,9 +42,6 @@ models:
               Number of seats available on flights from origin to destination.
           - name: no_of_flights
             description: Number of flights between origin and destination (multiple records for one month, many with flights > 1).
-            tests:
-                - not_null:
-                    severity: warn
           - name: distance 
             description: > 
               Distance (to nearest mile) flown between origin and destination.
