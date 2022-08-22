@@ -81,6 +81,7 @@ Endavour to pre-install the following applications
   * Download [SDK](https://cloud.google.com/sdk) for local setup.
   * Set environment variable to point to your downloaded auth-keys:
   
+  
   ```
   export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
   # Refresh token/session, and verify authentication
