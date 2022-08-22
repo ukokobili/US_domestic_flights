@@ -21,7 +21,7 @@ Build a data pipeline and dashboard for users to do data analytic operations on 
   * Create a dashboard.
 
 # Dataset Description
-The dataset was collected from [here](https://www.kaggle.com/datasets/ryanjt/us-domestic-flights-from-1990-to-2009) on the Kaggle website. It contains information about the crimes committed in Baltimore, Maryland, US.
+The dataset was collected from [Kaggle](https://www.kaggle.com/datasets/ryanjt/us-domestic-flights-from-1990-to-2009) website. It contains information about the crimes committed in Baltimore, Maryland, US.
 
 The dataset includes the following columns:
   * Origin: Three letter airport code of the origin airport
@@ -37,7 +37,7 @@ The dataset includes the following columns:
   * Destination Population:	Destination city's population as reported by US Census 
 
 # Technologies
-Below are the following technologies for this project:
+Below are the following technologies used for this project:
 
   * Cloud: GCP
   * Infrastructure as code(IaC): Terraform
@@ -80,11 +80,13 @@ Endavour to pre-install the following applications
     * BigQuery Admin
   * Download [SDK](https://cloud.google.com/sdk) for local setup.
   * Set environment variable to point to your downloaded auth-keys:
-  '''
+  
+  ```
   export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
   # Refresh token/session, and verify authentication
   gcloud auth application-default login
-  '''
+  ```
+  
   * Enable the following options under the APIs and services section:
      * [Identity and Access Management (IAM) API](https://console.cloud.google.com/apis/library/iam.googleapis.com?project=github-hn-1123)
      * [IAM service account credentials API](https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com?project=github-hn-1123)
