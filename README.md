@@ -122,19 +122,19 @@ You can easily run Airflow using the following commands:
 
 Now you can launch Airflow UI and run the DAGs.
 
-   Note: If you want to stop Airflow, please type ```docker-compose down``` command in your terminal.
+    Note: If you want to stop Airflow, please type ```docker-compose down``` command in your terminal.
 
-** Running DAGs **
-Open the http://localhost:8080/ address in your browser and login using ```airflow`` username and ```airflow``` password.
+* Running DAGs *
+Open the http://localhost:8080/ address in your browser and login using ```airflow``` username and ```airflow``` password.
 
 On the DAGs View page you can find three dags:
 
-gcs_ingestion_dag for downloading data from the source, unpacking and converting it to parquet format and finally uploading it to the Cloud Storage.
-gcs_bq_dag to subsequently create an external and then optimized table in BigQuery from the data stored in GCS.
+  * ```gcs_ingestion_dag``` for downloading data from the source, unpacking and converting it to parquet format and finally uploading it to the Cloud Storage.
+  * ```gcs_bq_dag``` to subsequently transorm and create a table and then optimized table in BigQuery from the data stored in GCS.
 
-Firstly, run the first ```gcs_ingestion_dag``` dag to enable data upload to GCS and then run the ```gcs_bq_dag``` dag to move, transform and create tables in DWH. 
+Firstly, run the first ```gcs_ingestion_dag``` dag to enable data upload to GCS and then run the ```gcs_bq_dag``` dag to transform and create tables in DWH. 
 
-5. DBT
+* DBT
 We are going to use dbt for data transformation in DWH and further analytics dashboard development.
 
 First you will need to create a dbt Cloud account (if you don't already have one) using this link and connect to your BigQuery by following these instructions. You can find more detailed instructions here.
