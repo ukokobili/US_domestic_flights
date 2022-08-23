@@ -149,6 +149,7 @@ Endavour to pre-install the following applications
      * Total number of seats
      * Average distance in mile
 
-<h1 style="text-align: center;">US Domestic Flights from 1990 - 2009</h1>
+<h3 style="text-align: center;">US Domestic Flights from 1990 - 2009 Dashboard</h3>
+![](https://github.com/ukokobili/US_domestic_flights/blob/main/photo/project_dashboard.png)
 
 
