@@ -107,18 +107,18 @@ Endavour to pre-install the following applications
      Note: Use terraform destroy command to remove your stack from the Cloud.
 
  * Airflow
-The next steps provide you with the instructions of running Apache Airflow, which will allow you to run the entire orchestration, taking into account that you have already set up a GCP account.
+   The next steps provide you with the instructions of running Apache Airflow, which will allow you to run the entire orchestration, taking into account that you have already set up a GCP account.
 
-Setup
-Go to the airflow subdirectory: here you can find the [Dockerfile](https://github.com/ukokobili/US_domestic_flights/blob/main/airflow/Dockerfile) and the lightweight version of the [docker-compose.yaml](https://github.com/ukokobili/US_domestic_flights/blob/main/airflow/docker-compose.yaml) file that are required to run Airflow.
+   Setup
+   Go to the airflow subdirectory: here you can find the [Dockerfile](https://github.com/ukokobili/US_domestic_flights/blob/main/airflow/Dockerfile) and the lightweight version of the [docker-compose.yaml](https://github.com/ukokobili/US_domestic_flights/blob/main/airflow/docker-compose.yaml) file that are required to run Airflow.
 
-The lightweight version of docker-compose file contains the minimum required set of components to run data pipelines. Specify the Project ID (GCP_PROJECT_ID) and Cloud Storage name (GCP_GCS_BUCKET) in the docker-compose.yaml before launching. Ensure these variables are the same as actual GCP setup.
+   The lightweight version of docker-compose file contains the minimum required set of components to run data pipelines. Specify the Project ID (GCP_PROJECT_ID) and Cloud Storage name (GCP_GCS_BUCKET) in the docker-compose.yaml before launching. Ensure these variables are the same as actual GCP setup.
 
-You can easily run Airflow using the following commands:
+   You can easily run Airflow using the following commands:
 
-  * ```docker-compose build``` to build the docker images;
-  * ```docker-compose up``` airflow-init to initialize the Airflow scheduler, DB and other stuff;
-  * ```docker-compose up``` to kick up the all the services from the container.
+    * ```docker-compose build``` to build the docker images;
+    * ```docker-compose up``` airflow-init to initialize the Airflow scheduler, DB and other stuff;
+    * ```docker-compose up``` to kick up the all the services from the container.
 
 Now you can launch Airflow UI and run the DAGs.
 Note: If you want to stop Airflow, please type ```docker-compose down``` command in your terminal.
