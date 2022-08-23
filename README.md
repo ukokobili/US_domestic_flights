@@ -90,7 +90,7 @@ Endavour to pre-install the following applications
      * [Identity and Access Management (IAM) API](https://console.cloud.google.com/apis/library/iam.googleapis.com?project=github-hn-1123)
      * [IAM service account credentials API](https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com?project=github-hn-1123)
      
- * Terraform
+* Terraform
     We use Terraform to build and manage GCP infrastructure. Terraform configuration files are located in the separate folder. There are 3 configuration files:
      * [variables.tf](https://github.com/ukokobili/US_domestic_flights/blob/main/terraform/variables.tf) - contains variables to make your configuration more dynamic and flexible;
      * [main.tf](https://github.com/ukokobili/US_domestic_flights/blob/main/terraform/main.tf) - is a key configuration file consisting of several sections.
