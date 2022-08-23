@@ -98,10 +98,10 @@ Endavour to pre-install the following applications
 
      Use the steps below to generate resources inside the GCP:
 
-      * Create a terraform folder the [variables.tf](https://github.com/ukokobili/US_domestic_flights/blob/main/terraform/variables.tf) and [main.tf](https://github.com/ukokobili/US_domestic_flights/blob/main/terraform/main.tf) files 
-      * Run terraform init command to initialize the configuration.
-      * Use terraform plan to match previews local changes against a remote state.
-      * Apply changes to the cloud with terraform apply command.
+     * Create a terraform folder the [variables.tf](https://github.com/ukokobili/US_domestic_flights/blob/main/terraform/variables.tf) and [main.tf](https://github.com/ukokobili/US_domestic_flights/blob/main/terraform/main.tf) files 
+     * Run terraform init command to initialize the configuration.
+     * Use terraform plan to match previews local changes against a remote state.
+     * Apply changes to the cloud with terraform apply command.
       Enter the GCP Project ID. 
       
       Note: Use terraform destroy command to remove your stack from the Cloud.
