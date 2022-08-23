@@ -109,16 +109,14 @@ Endavour to pre-install the following applications
  * Airflow
 The next steps provide you with the instructions of running Apache Airflow, which will allow you to run the entire orchestration, taking into account that you have already set up a GCP account.
 
-You can run Airflow locally using docker-compose. Before running it, please make sure you have at least 5 GB of free RAM. Alternatively, you can launch Airflow on a virtual machine in GCP (in this case, please refer to this video).
-
 Setup
-Go to the airflow subdirectory: here you can find the Dockerfile and the lightweight version of the docker-compose.yaml file that are required to run Airflow.
+Go to the airflow subdirectory: here you can find the [Dockerfile](https://github.com/ukokobili/US_domestic_flights/blob/main/airflow/Dockerfile) and the lightweight version of the [docker-compose.yaml](https://github.com/ukokobili/US_domestic_flights/blob/main/airflow/docker-compose.yaml) file that are required to run Airflow.
 
-The lightweight version of docker-compose file contains the minimum required set of components to run data pipelines. The only things you need to specify before launching it are your Project ID (GCP_PROJECT_ID) and Cloud Storage name (GCP_GCS_BUCKET) in the docker-compose.yaml. Please specify these variables according to your actual GCP setup.
+The lightweight version of docker-compose file contains the minimum required set of components to run data pipelines. Specify the Project ID (GCP_PROJECT_ID) and Cloud Storage name (GCP_GCS_BUCKET) in the docker-compose.yaml before launching. Ensure these variables are the same as actual GCP setup.
 
 You can easily run Airflow using the following commands:
 
-docker-compose build to build the image (takes ~15 mins for the first-time);
+  * <makr>docker-compose build</mark> to build the image (takes ~15 mins for the first-time);
 docker-compose up airflow-init to initialize the Airflow scheduler, DB and other stuff;
 docker-compose up to kick up the all the services from the container.
 Now you can launch Airflow UI and run the DAGs.
