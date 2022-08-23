@@ -57,7 +57,7 @@ The end-to-end data pipeline includes the following steps:
 
 You can find the detailed information on the diagram below:
 
-![]()
+![](https://github.com/ukokobili/US_domestic_flights/blob/main/photo/Flowcharts.jpeg)
 
 # Tutorial
 This tutorial contains the instructions you need to follow to reproduce the project results and can be found here.
