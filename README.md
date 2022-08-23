@@ -120,35 +120,34 @@ Endavour to pre-install the following applications
     * ```docker-compose up``` airflow-init to initialize the Airflow scheduler, DB and other stuff;
     * ```docker-compose up``` to kick up the all the services from the container.
 
-Now you can launch Airflow UI and run the DAGs.
-Note: If you want to stop Airflow, please type ```docker-compose down``` command in your terminal.
+   Now you can launch Airflow UI and run the DAGs.
+   Note: If you want to stop Airflow, please type ```docker-compose down``` command in your terminal.
 
-* Running DAGs *
-Open the http://localhost:8080/ address in your browser and login using ```airflow``` username and ```airflow``` password.
+   **Running DAGs**
+   Open the http://localhost:8080/ address in your browser and login using ```airflow``` username and ```airflow``` password.
 
-On the DAGs View page you can find three dags:
+   On the DAGs View page you can find three dags:
 
-  * ```gcs_ingestion_dag``` for downloading data from the source, unpacking and converting it to parquet format and finally uploading it to the Cloud Storage.
-  * ```gcs_bq_dag``` to subsequently transorm and create a table and then optimized table in BigQuery from the data stored in GCS.
+     * ```gcs_ingestion_dag``` for downloading data from the source, unpacking and converting it to parquet format and finally uploading it to the Cloud Storage.
+     * ```gcs_bq_dag``` to subsequently transorm and create a table and then optimized table in BigQuery from the data stored in GCS.
 
-Firstly, run the first ```gcs_ingestion_dag``` dag to enable data upload to GCS and then run the ```gcs_bq_dag``` dag to transform and create tables in DWH. 
+   Firstly, run the first ```gcs_ingestion_dag``` dag to enable data upload to GCS and then run the ```gcs_bq_dag``` dag to transform and create tables in DWH. 
 
-* DBT
-We are going to use [dbt](https://www.getdbt.com/) for data transformation in DWH and further analytics dashboard development.
+*  DBT
+   We are going to use [dbt](https://www.getdbt.com/) for data transformation in DWH and further analytics dashboard development.
 
-Using this [link](https://docs.getdbt.com/dbt-cli/cli-overview) to create download and install dbt core on your local machine then connect to your BigQuery following these [instructions](https://docs.getdbt.com/reference/warehouse-profiles/bigquery-profile) and modify the ```[profiles.yaml](https://docs.getdbt.com/reference/warehouse-profiles/bigquery-profile)``` in the ```./dbt``` directory
+   Using this [link](https://docs.getdbt.com/dbt-cli/cli-overview) to create download and install dbt core on your local machine then connect to your BigQuery following these [instructions](https://docs.getdbt.com/reference/warehouse-profiles/bigquery-profile) and modify the ```[profiles.yaml](https://docs.getdbt.com/reference/warehouse-profiles/bigquery-profile)``` in the ```./dbt``` directory
 
 * Google Data Studio
-Create dashboard after building the production model in dbt
+  Create dashboard after building the production model in dbt
 
-The dashboard was built using [Google Data Studio](https://datastudio.google.com/u/1/reporting/07cb0451-66f3-4d78-b7ed-601d421dbafe/page/HPk0C). 
+  The dashboard was built using [Google Data Studio](https://datastudio.google.com/u/1/reporting/07cb0451-66f3-4d78-b7ed-601d421dbafe/page/HPk0C). 
 
-The dashboard include details such as:
-
-  * Total number of flights
-  * Total number of passengers
-  * Total number of seats
-  * Average distance in mile
+  The dashboard include details such as:
+     * Total number of flights
+     * Total number of passengers
+     * Total number of seats
+     * Average distance in mile
 
 
 
