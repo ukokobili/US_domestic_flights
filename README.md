@@ -119,19 +119,20 @@ You can easily run Airflow using the following commands:
   * ```docker-compose build``` to build the docker images;
   * ```docker-compose up``` airflow-init to initialize the Airflow scheduler, DB and other stuff;
   * ```docker-compose up``` to kick up the all the services from the container.
-  Now you can launch Airflow UI and run the DAGs.
 
-Note: If you want to stop Airflow, please type docker-compose down command in your terminal.
+Now you can launch Airflow UI and run the DAGs.
 
-Running DAGs
-Open the http://localhost:8080/ address in your browser and login using airflow username and airflow password.
+   Note: If you want to stop Airflow, please type ```docker-compose down``` command in your terminal.
+
+** Running DAGs **
+Open the http://localhost:8080/ address in your browser and login using ```airflow`` username and ```airflow``` password.
 
 On the DAGs View page you can find three dags:
 
-data_ingestion_to_gcs_dag for downloading data from the source, unpacking and converting it to parquet format and finally uploading it to the Cloud Storage.
-gcs_to_bq_dag to subsequently create an external and then optimized table in BigQuery from the data stored in GCS.
-data_transform_dag to prepare data for analytics.
-The first dag is scheduled to run every month, while the second one should be triggered manually. Therefore, you need to activate the data_ingestion_to_gcs_dag dag first and wait for it to finish uploading data to GCS. And only after that manually run the gcs_to_bq_dag dag to create tables in DWH. Finally, you can trigger data_transform_dag.
+gcs_ingestion_dag for downloading data from the source, unpacking and converting it to parquet format and finally uploading it to the Cloud Storage.
+gcs_bq_dag to subsequently create an external and then optimized table in BigQuery from the data stored in GCS.
+
+Firstly, run the first ```gcs_ingestion_dag``` dag to enable data upload to GCS and then run the ```gcs_bq_dag``` dag to move, transform and create tables in DWH. 
 
 5. DBT
 We are going to use dbt for data transformation in DWH and further analytics dashboard development.
