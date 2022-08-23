@@ -104,7 +104,7 @@ Endavour to pre-install the following applications
      * Apply changes to the cloud with terraform apply command.
       Enter the GCP Project ID. 
       
-      Note: Use terraform destroy command to remove your stack from the Cloud.
+     Note: Use terraform destroy command to remove your stack from the Cloud.
 
  * Airflow
 The next steps provide you with the instructions of running Apache Airflow, which will allow you to run the entire orchestration, taking into account that you have already set up a GCP account.
@@ -116,10 +116,10 @@ The lightweight version of docker-compose file contains the minimum required set
 
 You can easily run Airflow using the following commands:
 
-  * <makr>docker-compose build</mark> to build the image (takes ~15 mins for the first-time);
-docker-compose up airflow-init to initialize the Airflow scheduler, DB and other stuff;
-docker-compose up to kick up the all the services from the container.
-Now you can launch Airflow UI and run the DAGs.
+  * ```docker-compose build``` to build the docker images;
+  * ```docker-compose up``` airflow-init to initialize the Airflow scheduler, DB and other stuff;
+  * ```docker-compose up``` to kick up the all the services from the container.
+  Now you can launch Airflow UI and run the DAGs.
 
 Note: If you want to stop Airflow, please type docker-compose down command in your terminal.
 
