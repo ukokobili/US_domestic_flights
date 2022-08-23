@@ -121,8 +121,7 @@ You can easily run Airflow using the following commands:
   * ```docker-compose up``` to kick up the all the services from the container.
 
 Now you can launch Airflow UI and run the DAGs.
-
-    Note: If you want to stop Airflow, please type ```docker-compose down``` command in your terminal.
+Note: If you want to stop Airflow, please type ```docker-compose down``` command in your terminal.
 
 * Running DAGs *
 Open the http://localhost:8080/ address in your browser and login using ```airflow``` username and ```airflow``` password.
@@ -135,26 +134,21 @@ On the DAGs View page you can find three dags:
 Firstly, run the first ```gcs_ingestion_dag``` dag to enable data upload to GCS and then run the ```gcs_bq_dag``` dag to transform and create tables in DWH. 
 
 * DBT
-We are going to use dbt for data transformation in DWH and further analytics dashboard development.
+We are going to use [dbt](https://www.getdbt.com/) for data transformation in DWH and further analytics dashboard development.
 
-First you will need to create a dbt Cloud account (if you don't already have one) using this link and connect to your BigQuery by following these instructions. You can find more detailed instructions here.
+Using this [link](https://docs.getdbt.com/dbt-cli/cli-overview) to create download and install dbt core on your local machine then connect to your BigQuery following these [instructions](https://docs.getdbt.com/reference/warehouse-profiles/bigquery-profile) and modify the ```[profiles.yaml](https://docs.getdbt.com/reference/warehouse-profiles/bigquery-profile)``` in the ```./dbt``` directory
 
-Note that:
+* Google Data Studio
+Create dashboard after building the production model in dbt
 
-you can fork or copy an existing dbt project located in the separate folder and use a link to the forked/copied version if necessary;
-you need to check that BigQuery already has areas (datasets) for staging and production dbt models (citibike_dev and citibike_prod in our case);
-you should modify profiles.yaml file according to your dataset names and credentials.
-6. Google Data Studio
-When the production models are ready, you can start building a dashboard.
+The dashboard was built using [Google Data Studio](https://datastudio.google.com/u/1/reporting/07cb0451-66f3-4d78-b7ed-601d421dbafe/page/HPk0C). 
 
-The dashboard is built using Google Data Studio. The process of the such dashboard creating in Google Data Studio is described in detail in this video.
+The dashboard include details such as:
 
-And the final dashboard includes the following diagrams:
+  * Total number of flights
+  * Total number of passengers
+  * Total number of seats
+  * Average distance in mile
 
-Total trips count
-Average trips duration per month and year
-User type distribution
-Trips count per month and year
-Trips count by start station on the dynamic Google map
 
 
