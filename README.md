@@ -80,21 +80,18 @@ Endavour to pre-install the following applications
     * BigQuery Admin
   * Download [SDK](https://cloud.google.com/sdk) for local setup.
   * Set environment variable to point to your downloaded auth-keys:
-  
-  
   ```
   export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
   # Refresh token/session, and verify authentication
   gcloud auth application-default login
-  ```
   
+  ```
   * Enable the following options under the APIs and services section:
      * [Identity and Access Management (IAM) API](https://console.cloud.google.com/apis/library/iam.googleapis.com?project=github-hn-1123)
      * [IAM service account credentials API](https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com?project=github-hn-1123)
      
-  * Terraform
+ * Terraform
     We use Terraform to build and manage GCP infrastructure. Terraform configuration files are located in the separate folder. There are 3 configuration files:
-
      * [variables.tf](https://github.com/ukokobili/US_domestic_flights/blob/main/terraform/variables.tf) - contains variables to make your configuration more dynamic and flexible;
      * [main.tf](https://github.com/ukokobili/US_domestic_flights/blob/main/terraform/main.tf) - is a key configuration file consisting of several sections.
      Note: You can find the detailed description of each section [here](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/week_1_basics_n_setup/1_terraform_gcp/1_terraform_overview.md)
