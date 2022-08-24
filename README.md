@@ -144,10 +144,10 @@ Endavour to pre-install the following applications
   The dashboard was built using [Google Data Studio](https://datastudio.google.com/u/1/reporting/07cb0451-66f3-4d78-b7ed-601d421dbafe/page/HPk0C). 
 
   The dashboard include details such as:
-     * Total number of flights
-     * Total number of passengers
-     * Total number of seats
-     * Average distance in mile
+     * Total number of flights.
+     * Total number of passengers.
+     * Total number of seats.
+     * Average distance in mile.
 
 <h3 style="text-align: center;">US Domestic Flights from 1990 - 2009 Dashboard</h3>
 
