@@ -21,7 +21,7 @@ Build a data pipeline and dashboard for users to do data analytic operations on 
   * Create a dashboard.
 
 # Dataset Description
-The dataset was collected from [Kaggle](https://www.kaggle.com/datasets/ryanjt/us-domestic-flights-from-1990-to-2009) website. It contains information about the crimes committed in Baltimore, Maryland, US.
+The dataset was collected from [Kaggle](https://www.kaggle.com/datasets/ryanjt/us-domestic-flights-from-1990-to-2009) website. 
 
 The dataset includes the following columns:
   * Origin: Three letter airport code of the origin airport
